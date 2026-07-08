@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    /* Degradado suave en tonos azul pastel y lavanda */
+    background: linear-gradient(135deg, #e0eafc 0%, #eef2f3 100%);
+    min-height: 100vh;
+    color: #4a5568;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    /* Azul pastel profundo pero suave */
+    background-color: #b0c4de; 
+    color: #2d3748;
+    padding: 2rem 0;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: #3b4b61;
+}
+
+main {
+    max-width: 700px;
+    width: 90%;
+    margin: 3rem auto;
+    padding: 2.5rem;
+    /* Efecto contenedor blanco semi-transparente muy limpio */
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    /* Bordes más redondeados y suaves */
+    border-radius: 20px;
+    /* Sombra difuminada de estilo estético */
+    box-shadow: 0 10px 30px rgba(157, 178, 204, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+h2 {
+    font-size: 1.3rem;
+    color: #475a75;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+form {
+    display: flex;
+    flex-direction: column; /* Cambiado a columna para que respire mejor en móviles */
+    gap: 1.2rem;
+    margin-bottom: 3rem;
+    background: #f0f4f8;
+    padding: 1.5rem;
+    border-radius: 14px;
+    border: 1px dashed #cbd5e1;
+}
+
+/* Estilo estético para el input de tipo archivo */
+input[type="file"] {
+    font-family: inherit;
+    font-size: 0.9rem;
+    color: #64748b;
+}
+
+button {
+    /* Botón azul pastel vibrante */
+    background-color: #8faed6;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    /* Transición suave para el efecto hover */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(143, 174, 214, 0.3);
+}
+
+button:hover {
+    background-color: #7697c4;
+    transform: translateY(-2px); /* Pequeño salto hacia arriba al pasar el mouse */
+    box-shadow: 0 6px 18px rgba(118, 151, 196, 0.4);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Estilo para la lista de archivos */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    background: #ffffff;
+    padding: 1rem;
+    margin-bottom: 0.8rem;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    color: #4a5568;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+}
+input[type="text"] {
+    font-family: inherit;
+    padding: 0.7rem 1rem;
+    border-radius: 10px;
+    border: 1px solid #cbd5e1;
+    background: #ffffff;
+    color: #4a5568;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #8faed6; /* Se ilumina en azul pastel cuando haces clic */
+    box-shadow: 0 0 0 3px rgba(143, 174, 214, 0.2);
+}
+select {
+    font-family: inherit;
+    padding: 0.7rem 1rem;
+    border-radius: 10px;
+    border: 1px solid #cbd5e1;
+    background: #ffffff;
+    color: #4a5568;
+    font-size: 0.95rem;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn-filtro {
+    background-color: transparent;
+    color: #64748b;
+    border: 1px solid #cbd5e1;
+    padding: 0.5rem 1.2rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    box-shadow: none;
+    transition: all 0.2s ease;
+}
+
+
+.btn-filtro.activo, .btn-filtro:hover {
+    background-color: #8faed6;
+    color: white;
+    border-color: #8faed6;
+    box-shadow: 0 4px 10px rgba(143, 174, 214, 0.2);
+}

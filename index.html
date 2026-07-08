@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Nube Aesthetic</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <header>
+        <h1>✨ Mi Almacenamiento Cloud ✨</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Sube tus archivos</h2>
+            <form action="/subir" method="POST" enctype="multipart/form-data">
+                <label for="archivo">Selecciona un archivo:</label>
+                <input type="file" id="archivo" name="archivo" required>
+                
+                <label for="nombrePersonalizado">Nombre del archivo (Opcional):</label>
+                <input type="text" id="nombrePersonalizado" name="nombrePersonalizado" placeholder="Ej: Apuntes de Inglés">
+                
+                <label for="categoria">Categoría:</label>
+                <select id="categoria" name="categoria">
+                    <option value="General">General 📁</option>
+                    <option value="Imágenes">Imágenes 🖼️</option>
+                    <option value="Documentos">Documentos 📄</option>
+                    <option value="Otros">Otros ⚙️</option>
+                </select>
+
+                <button type="submit">Subir archivo</button>
+            </form>
+        </section>
+
+        <hr style="border: 0; height: 1px; background: #e2e8f0; margin: 2rem 0;">
+
+        <section>
+            <h2>Mis Archivos Guardados</h2>
+            
+            <div class="filtros-categoria" style="display: flex; gap: 10px; margin-bottom: 1.5rem;">
+                <button class="btn-filtro activo" onclick="filtrarArchivos('Todos')">Todos</button>
+                <button class="btn-filtro" onclick="filtrarArchivos('General')">General</button>
+                <button class="btn-filtro" onclick="filtrarArchivos('Imágenes')">Imágenes</button>
+                <button class="btn-filtro" onclick="filtrarArchivos('Documentos')">Documentos</button>
+            </div>
+
+            <ul id="lista-archivos"></ul>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
