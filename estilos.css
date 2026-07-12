@@ -1,114 +1,120 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700;1,900&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap');
 
 body {
-    font-family: 'Space Grotesk', sans-serif;
+    /* El tono beige/arena exacto de la portada */
+    background-color: #ded9d4; 
+    font-family: 'Plus Jakarta Sans', sans-serif;
     margin: 0;
     padding: 0;
-    background: radial-gradient(circle, #252830 0%, #131418 100%);
     min-height: 100vh;
-    color: #e2e8f0;
+    color: #1a1a1a;
     display: flex;
     flex-direction: column;
 }
 
 header {
-    background-color: #0d0e10;
-    color: #ffffff;
-    padding: 2.5rem 0;
+    background-color: transparent;
+    padding: 3.5rem 0 2rem 0;
     text-align: center;
-    border-bottom: 2px solid #3d4250;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
 header h1 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 900;
+    font-size: 3rem;
     margin: 0;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: -1px;
+    letter-spacing: -0.5px;
     text-transform: uppercase;
-    color: #c9465b; /* Un toque de rojo vino conceptual */
+    color: #0b0b0b;
+    /* Efecto sutil de relieve/borde blanco como se ve en el logo de MILO J */
+    text-shadow: 1px 1px 0px #ffffff, -1px -1px 0px #ffffff, 1px -1px 0px #ffffff, -1px 1px 0px #ffffff; 
 }
 
 main {
-    max-width: 700px;
+    max-width: 600px;
     width: 90%;
-    margin: 3rem auto;
+    margin: 1rem auto 4rem auto;
     padding: 2.5rem;
-    background: rgba(20, 22, 26, 0.85);
-    backdrop-filter: blur(15px);
-    border-radius: 12px;
-    border: 1px solid #2d3139;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+    /* Fondo ligeramente más claro que se funde de forma orgánica */
+    background: rgba(255, 254, 252, 0.4); 
+    border-radius: 4px;
+    /* Un borde fino que recuerda a los bocetos */
+    border: 1px solid rgba(0, 0, 0, 0.08); 
+    flex: 1;
 }
 
 h2 {
-    font-size: 1.4rem;
-    color: #ffffff;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #111111;
     margin-top: 0;
-    margin-bottom: 1.5rem;
-    font-weight: 600;
+    margin-bottom: 2rem;
+    text-align: center;
 }
 
 form {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    margin-bottom: 3rem;
-    background: #181a1f;
-    padding: 2rem;
-    border-radius: 8px;
-    border: 1px solid #282c34;
+    margin-bottom: 2.5rem;
+    background: #f4f0ec;
+    padding: 2.5rem;
+    border-radius: 4px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
 }
 
+/* Inputs con el azul trazo de bolígrafo inspirado en el dibujo central */
 input[type="file"], input[type="text"], select {
     font-family: inherit;
-    padding: 0.8rem 1rem;
-    border-radius: 6px;
-    border: 1px solid #3e4451;
-    background: #131418;
-    color: #abb2bf;
+    padding: 0.9rem 1rem;
+    border-radius: 4px;
+    border: 1.5px solid #b5aeaa;
+    background: #ffffff;
+    color: #1a1a1a;
     font-size: 0.95rem;
     outline: none;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
 }
 
 input[type="file"]:focus, input[type="text"]:focus, select:focus {
-    border-color: #c9465b;
-    color: #ffffff;
+    /* El azul oscuro del arte del álbum */
+    border-color: #0b1d52; 
+    box-shadow: 0 0 0 3px rgba(11, 29, 82, 0.1);
 }
 
 button {
-    background-color: #c9465b;
+    /* Botón oscuro y minimalista a juego con la estética limpia */
+    background-color: #0b0b0b;
     color: #ffffff;
     border: none;
-    padding: 1rem;
-    border-radius: 6px;
-    font-size: 1rem;
-    font-weight: 700;
-    text-transform: uppercase;
+    padding: 1.1rem;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
 }
 
 button:hover {
-    background-color: #df576c;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(201, 70, 91, 0.4);
+    background-color: #262626;
+    transform: translateY(-1px);
 }
 
-.btn-filtro {
-    background-color: transparent;
-    color: #abb2bf;
-    border: 1px solid #3e4451;
-    padding: 0.6rem 1.2rem;
-    border-radius: 20px;
+footer {
+    text-align: center;
+    padding: 2rem 0;
     font-size: 0.85rem;
-    font-weight: 600;
-    transition: all 0.3s ease;
+    /* Estilo manuscrito elegante para los créditos */
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: #55514e;
+    margin-top: auto;
 }
 
-.btn-filtro.activo, .btn-filtro:hover {
-    background-color: #ffffff;
-    color: #131418;
-    border-color: #ffffff;
+footer p {
+    margin: 0;
 }
